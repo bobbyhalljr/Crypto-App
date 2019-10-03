@@ -13,7 +13,7 @@ function App() {
   return (
     <div>
       <div className="App">
-        <Navbar />
+        {/* <Navbar /> */}
       </div>
 
       <Route exact path='/' render={() => <Home />}/>
