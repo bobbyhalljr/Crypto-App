@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { NavLink, Route } from 'react-router-dom';
 
 const Coins = () => {
     const [coins, setcoins] = useState([])
@@ -14,7 +15,14 @@ const Coins = () => {
     }, [])
 
     return (
-        <h1>hello</h1>
+        coins.map(coin => {
+            return (
+                <div>
+                    <h2>{coin.name} {coin.symbol}</h2>
+                    <button><NavLink to='/coin/:id'>Get Coin Info</NavLink></button>
+                </div>
+            )
+        })
     )
 }
 
